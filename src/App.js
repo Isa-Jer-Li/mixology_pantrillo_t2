@@ -1,35 +1,16 @@
-import React, { component } from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from "react";
 import './App.css';
 
-class App extends component {
-  constructor(props) {
-    super(props)
+function App() {
+  return (
+    <div>
+      const [cocktails, setCocktails] = useState([])
 
-    this.state = {
-      cocktail: [],
-    }
-  }
-  render() {
-    return (
-      <>
-    <div className = 'mian-container'>
-      <form>
-        <div className = 'search-container'>
-          <input type = 'search' className = 'search-field' />
-            <br />
-             <button className = 'submit-btn'> Search cocktails. . . </button>
-
-          </div>
-      </form>
-
-
-
+      useEffect(() => {
+        fetch('www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink')
+      })
     </div>
-
-      </>
-    )
-  }
+  )
 }
 
 
