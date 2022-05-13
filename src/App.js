@@ -11,21 +11,25 @@ class App extends component {
     }
   }
   render() {
-    return <>
+    return (
+      <>
     <div className = 'mian-container'>
       <form>
-      <div className = 'search-container'>
+        <div className = 'search-container'>
+          <input type = 'search' className = 'search-field' />
+            <br />
+             <button className = 'submit-btn'> Search cocktails. . . </button>
 
-      </div>
+          </div>
       </form>
 
 
 
     </div>
 
-    </>;
+      </>
+    )
   }
-
 }
 
 
